@@ -97,4 +97,3 @@ void free_dlistint(dlistint_t *l)
 		l = temp;
 	}
 }
-

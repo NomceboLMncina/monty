@@ -8,23 +8,23 @@
 /**
  * pchar_handler - handles the pchar instruction
  * @stack: double pointer to the stack to push to
- * @line_n: number of the line in the file
+ * @line_number: number of the line in the file
  */
 
-void pchar_handler(stack_t **stack, unsigned int line_n)
+void pchar_handler(stack_t **stack, unsigned int line_number)
 {
 	stack_t *node = *stack;
 
 	if (!node)
 	{
-		dprintf(STDERR_FILENO, PCHAR_FAIL, line_n);
+		dprintf(STDERR_FILENO, PCHAR_FAIL, line_number);
 		free_all(1);
 		exit(EXIT_FAILURE);
 	}
 
 	if (node->g < 0 || node->g > 127)
 	{
-		dprintf(STDERR_FILENO, PCHAR_RANGE, line_n);
+		dprintf(STDERR_FILENO, PCHAR_RANGE, line_number);
 		free_all(1);
 		exit(EXIT_FAILURE);
 	}
@@ -36,14 +36,14 @@ void pchar_handler(stack_t **stack, unsigned int line_n)
 /**
  * pstr_handler - handles the pstr instruction
  * @stack: double pointer to the stack to push to
- * @line_n: number of the line in the file
+ * @line_number: number of the line in the file
  */
 
-void pstr_handler(stack_t **stack, unsigned int line_n)
+void pstr_handler(stack_t **stack, unsigned int line_number)
 {
 	stack_t *node = *stack;
 
-	(void)line_n;
+	(void)line_number;
 
 	if (!node)
 	{

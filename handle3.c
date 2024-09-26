@@ -4,10 +4,10 @@
 /**
  * rotl_handler - handles the instruction
  * @stack: double pointer to the stack to push to
- * @line_n: number of the line in the file
+ * @line_number: number of the line in the file
  */
 
-void rotl_handler(stack_t **stack, unsigned int line_n)
+void rotl_handler(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp = *stack;
 	int number  = 0;
@@ -25,15 +25,15 @@ void rotl_handler(stack_t **stack, unsigned int line_n)
 /**
  * rotr_handler - handles the instruction
  * @stack: double pointer to the stack to push to
- * @line_n: number of the line in the file
+ * @line_number: number of the line in the file
  */
 
-void rotr_handler(stack_t **stack, unsigned int line_n)
+void rotr_handler(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp = *stack;
 	int number = 0, en = dlistint_len(*stack);
 
-	(void)line_n;
+	(void)line_number;
 
 	if (*stack == NULL)
 		return;
@@ -46,13 +46,13 @@ void rotr_handler(stack_t **stack, unsigned int line_n)
 /**
  * stack_handler - handles the stack instruction
  * @stack: double pointer to the stack to push to
- * @line_n: number of the line in the file
+ * @line_number: number of the line in the file
  */
 
-void stack_handler(stack_t **stack, unsigned int line_n)
+void stack_handler(stack_t **stack, unsigned int line_number)
 {
 	(void)stack;
-	(void)line_n;
+	(void)line_number;
 	data.qflag = 0;
 }
 
@@ -60,13 +60,12 @@ void stack_handler(stack_t **stack, unsigned int line_n)
 /**
  * queue_handler - handles the queue instruction
  * @stack: double pointer to the stack to push to
- * @line_n: number of the line in the file
+ * @line_number: number of the line in the file
  */
 
-void queue_handler(stack_t **stack, unsigned int line_n)
+void queue_handler(stack_t **stack, unsigned int line_number)
 {
 	(void)stack;
-	(void)line_n;
+	(void)line_number;
 	data.qflag = 1;
 }
-

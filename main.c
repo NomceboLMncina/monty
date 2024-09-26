@@ -32,7 +32,7 @@ void monty(args_t *args)
 	}
 	while (1)
 	{
-		args->line_n++;
+		args->line_number++;
 		o = getline(&(data.line), &en, data.fptr);
 		if (o < 0)
 			break;
@@ -45,11 +45,11 @@ void monty(args_t *args)
 		code_func = get_func(data.words);
 		if (!code_func)
 		{
-			dprintf(STDERR_FILENO, UNKNOWN, args->line_n, data.words[0]);
+			dprintf(STDERR_FILENO, UNKNOWN, args->line_number, data.words[0]);
 			free_all(1);
 			exit(EXIT_FAILURE);
 		}
-		code_func(&(data.stack), args->line_n);
+		code_func(&(data.stack), args->line_number);
 		free_all(0);
 	}
 	free_all(1);
@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 	args_t args;
 	args.av = argv[1];
 	args.ac = argc;
-	args.line_n = 0;
+	args.line_number = 0;
 
 	monty(&args);
 

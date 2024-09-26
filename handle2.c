@@ -4,10 +4,10 @@
 /**
  * sub_handler - handles the sub instruction
  * @stack: double pointer to the stack to push to
- * @line_n: number of the line in the file
+ * @line_number: number of the line in the file
  */
 
-void sub_handler(stack_t **stack, unsigned int line_n)
+void sub_handler(stack_t **stack, unsigned int line_number)
 {
 	int sub = 0;
 	stack_t *node = NULL;
@@ -16,7 +16,7 @@ void sub_handler(stack_t **stack, unsigned int line_n)
 
 	if (dlistint_len(*stack) < 2)
 	{
-		dprintf(STDERR_FILENO, SUB_FAIL, line_n);
+		dprintf(STDERR_FILENO, SUB_FAIL, line_number);
 		free_all(1);
 		exit(EXIT_FAILURE);
 	}
@@ -36,10 +36,10 @@ void sub_handler(stack_t **stack, unsigned int line_n)
 /**
  * div_handler - handles the div instruction
  * @stack: double pointer to the stack to push to
- * @line_n: number of the line in the file
+ * @line_number: number of the line in the file
  */
 
-void div_handler(stack_t **stack, unsigned int line_n)
+void div_handler(stack_t **stack, unsigned int line_number)
 {
 	int div = 0;
 	stack_t *node = NULL;
@@ -48,14 +48,14 @@ void div_handler(stack_t **stack, unsigned int line_n)
 
 	if (dlistint_len(*stack) < 2)
 	{
-		dprintf(STDERR_FILENO, DIV_FAIL, line_n);
+		dprintf(STDERR_FILENO, DIV_FAIL, line_number);
 		free_all(1);
 		exit(EXIT_FAILURE);
 	}
 
 	if (node0->g == 0)
 	{
-		dprintf(STDERR_FILENO, DIV_ZERO, line_n);
+		dprintf(STDERR_FILENO, DIV_ZERO, line_number);
 		free_all(1);
 		exit(EXIT_FAILURE);
 	}
@@ -75,10 +75,10 @@ void div_handler(stack_t **stack, unsigned int line_n)
 /**
  * mul_handler - handles the mul instruction
  * @stack: double pointer to the stack to push to
- * @line_n: number of the line in the file
+ * @line_number: number of the line in the file
  */
 
-void mul_handler(stack_t **stack, unsigned int line_n)
+void mul_handler(stack_t **stack, unsigned int line_number)
 {
 	int mul = 0;
 	stack_t *node = NULL;
@@ -87,7 +87,7 @@ void mul_handler(stack_t **stack, unsigned int line_n)
 
 	if (dlistint_len(*stack) < 2)
 	{
-		dprintf(STDERR_FILENO, MUL_FAIL, line_n);
+		dprintf(STDERR_FILENO, MUL_FAIL, line_number);
 		free_all(1);
 		exit(EXIT_FAILURE);
 	}
@@ -107,10 +107,10 @@ void mul_handler(stack_t **stack, unsigned int line_n)
 /**
  * mod_handler - handles the mod instruction
  * @stack: double pointer to the stack to push to
- * @line_n: number of the line in the file
+ * @line_number: number of the line in the file
  */
 
-void mod_handler(stack_t **stack, unsigned int line_n)
+void mod_handler(stack_t **stack, unsigned int line_number)
 {
 	int mod = 0;
 	stack_t *node = NULL;
@@ -119,14 +119,14 @@ void mod_handler(stack_t **stack, unsigned int line_n)
 
 	if (dlistint_len(*stack) < 2)
 	{
-		dprintf(STDERR_FILENO, MOD_FAIL, line_n);
+		dprintf(STDERR_FILENO, MOD_FAIL, line_number);
 		free_all(1);
 		exit(EXIT_FAILURE);
 	}
 
 	if (node0->g == 0)
 	{
-		dprintf(STDERR_FILENO, DIV_ZERO, line_n);
+		dprintf(STDERR_FILENO, DIV_ZERO, line_number);
 		free_all(1);
 		exit(EXIT_FAILURE);
 	}

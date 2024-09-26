@@ -51,14 +51,15 @@ void (*get_func(char **parse))(stack_t **, unsigned int)
  * @stack: double pointer to the stack to push to
  * @line_n: number of the line in the file
  */
-void push_handler(stack_t **stack, unsigned int line_n)
+
+void push_handler(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new;
 	int number = 0, x;
 
 	if (data.words[1] == NULL)
 	{
-		dprintf(STDERR_FILENO, PUSH_FAIL, line_n);
+		dprintf(STDERR_FILENO, PUSH_FAIL, line_number);
 		free_all(1);
 		exit(EXIT_FAILURE);
 	}
@@ -67,7 +68,7 @@ void push_handler(stack_t **stack, unsigned int line_n)
 	{
 		if (isalpha(data.words[1][x]) != 0)
 		{
-			dprintf(STDERR_FILENO, PUSH_FAIL, line_n);
+			dprintf(STDERR_FILENO, PUSH_FAIL, line_number);
 			free_all(1);
 			exit(EXIT_FAILURE);
 		}
@@ -89,12 +90,12 @@ void push_handler(stack_t **stack, unsigned int line_n)
 /**
  * pall_handler - handles the pall instruction
  * @stack: double pointer to the stack to push to
- * @line_n: number of the line in the file
+ * @line_number: number of the line in the file
  */
-void pall_handler(stack_t **stack, unsigned int line_n)
+
+void pall_handler(stack_t **stack, unsigned int line_number)
 {
-	(void)line_n;
+	(void)line_number;
 	if (*stack)
 		print_dlistint(*stack);
 }
-
