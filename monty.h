@@ -36,7 +36,7 @@ typedef struct instruction_s
 {
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_n);
-} instruction_t;
+} instruction;
 
 /**
  * struct args_s – A structure of arguments from main
@@ -97,7 +97,7 @@ extern data_t data;
 
 void monty(args_t *args);
 
-void (*get_func(char **parsed))(stack_t **, unsigned int);
+void (*get_func(char **parse))(stack_t **, unsigned int);
 void push_handler(stack_t **stack, unsigned int line_n);
 void pall_handler(stack_t **stack, unsigned int line_n);
 

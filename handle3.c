@@ -31,7 +31,7 @@ void rotl_handler(stack_t **stack, unsigned int line_n)
 void rotr_handler(stack_t **stack, unsigned int line_n)
 {
 	stack_t *temp = *stack;
-	int num = 0, en = dlistint_len(*stack);
+	int number = 0, en = dlistint_len(*stack);
 
 	(void)line_n;
 

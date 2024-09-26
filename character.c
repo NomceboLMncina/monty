@@ -1,5 +1,9 @@
 #include "monty.h"
 #include "lists.h"
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <sys/types.h>
 
 /**
  * pchar_handler - handles the pchar instruction
