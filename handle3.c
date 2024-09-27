@@ -12,7 +12,7 @@ void rotl_handler(stack_t **stack, unsigned int line_number)
 	stack_t *temp = *stack;
 	int number  = 0;
 
-	(void)line_n;
+	(void)line_number;
 
 	if (*stack == NULL)
 		return;

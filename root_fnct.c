@@ -49,7 +49,7 @@ void (*get_func(char **parse))(stack_t **, unsigned int)
 /**
  * push_handler - handles the push instruction
  * @stack: double pointer to the stack to push to
- * @line_n: number of the line in the file
+ * @line_number: number of the line in the file
  */
 
 void push_handler(stack_t **stack, unsigned int line_number)

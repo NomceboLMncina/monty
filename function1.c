@@ -25,7 +25,7 @@ size_t dlistint_len(const dlistint_t *f)
 /**
  * add_dnodeint - adds a new node at the beginning of a doubly linked list
  * @l: double pointer to the list
- * @n: data to insert in the new node
+ * @g: data to insert in the new node
  * Return: the address of the new element, or NULL if it failed
  */
 
@@ -55,9 +55,10 @@ dlistint_t *add_dnodeint(dlistint_t **l, const int g)
 
 /**
  * print_dlistint - prints a doubly linked list
- * @h: pointer to the list
+ * @f: pointer to the list
  * Return: number of nodes in the list
  */
+
 size_t print_dlistint(const dlistint_t *f)
 {
 	size_t nodes = 0;

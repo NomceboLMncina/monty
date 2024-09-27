@@ -65,8 +65,11 @@ void monty(args_t *args)
 int main(int argc, char *argv[])
 {
 	args_t args;
+
 	args.av = argv[1];
+
 	args.ac = argc;
+
 	args.line_number = 0;
 
 	monty(&args);
