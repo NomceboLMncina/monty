@@ -82,7 +82,7 @@ extern data_t data;
 #define UNKNOWN "L%u: unknown instruction %s\n"
 #define MALLOC_FAIL "Error: malloc failed\n"
 #define PUSH_FAIL "L%u: usage: push integer\n"
-#define PINT_FAIL "L%u: can't print, stack empty\n"
+#define PINT_FAIL "L%u: can't pint, stack empty\n"
 #define POP_FAIL "L%u: can't pop an empty stack\n"
 #define SWAP_FAIL "L%u: can't swap, stack too short\n"
 #define ADD_FAIL "L%u: can't add, stack too short\n"
